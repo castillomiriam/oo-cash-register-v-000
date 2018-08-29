@@ -12,11 +12,11 @@ class CashRegister
     self.total += price * quantity
     quantity.times do
       items << title
-  end
+    end
   end
 
   def apply_discount
-    if self.discount > 0
+    binding.pry if self.discount > 0
       self.total -= self.total * (self.discount / 100.to_f)
       "After the discount, the total comes to $#{self.total.to_i}."
     else
